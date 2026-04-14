@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KonomiNote</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuInput = document.getElementById('menu');
+    const mediaQuery = window.matchMedia('(min-width: 1440px)');
+    function handleWindowChange(e) {
+        if (e.matches) {
+            menuInput.checked = false;
+        }
+    }
+    mediaQuery.addEventListener('change', handleWindowChange);
+});
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header-fixed');
+    if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+mediaQuery.addEventListener('change', handleTabletChange);
+</script>
+<body>
+<div class="wrap">
+    <header>
+        <div class="header-box">
+            <div class="header-fixed">
+                <h1><a href="#"><img id="logo" src="img/logomark.png" alt="ロゴ"></a></h1>
+                <ul class="header-menu-pc">
+                    <li class="header-menu-item"><a href="#">機能・使い方</a></li>
+                    <li class="header-menu-item"><a href="#">プレミアムプラン</a></li>
+                    <li class="header-menu-item"><a href="#">ユーザーの声</a></li>
+                    <li class="header-menu-item"><a href="#">よくある質問</a></li>
+                    <li class="header-menu-item"><a href="#">お問い合わせ</a></li>
+                </ul>
+                <div class="header-nav-menu">
+                    <input type="checkbox" id="menu">
+                    <label class="menu-button" for="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <ul class="header-menu-sp">
+                        <li class="header-menu-item"><a href="#">機能・使い方</a></li>
+                        <li class="header-menu-item"><a href="#">プレミアムプラン</a></li>
+                        <li class="header-menu-item"><a href="#">ユーザーの声</a></li>
+                        <li class="header-menu-item"><a href="#">よくある質問</a></li>
+                        <li class="header-menu-item"><a href="#">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+                <div class="header-item">
+                    <div class="header-top-box">
+                        <div class="header-mainvisual">
+                            <picture>
+                                <source srcset="img/pc-top-img.png" media="(min-width: 1440px)">
+                                <source srcset="img/tablet-top-img.png" media="(min-width: 834px)">
+                                <img class="preview" src="img/sp-top-img.png" alt="メインビジュアル">
+                                </picture>
+                        </div>
+                    </div>
+                    <div class="header-bottom-box">
+                        <div class="header-catchcopy">
+                            <h2>世界に<br>ひとつだけの<br>トリセツを作ろう</h2>
+                        </div>
+                        <div class="header-download-button">
+                            <a href="#"><img class="download-button" src="img/appstore-img.png" alt="appstoreダウンロードボタン"></a>
+                            <a href="#"><img class="download-button" src="img/googleplay-img.png" alt="googleplayダウンロードボタン"></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="header-decoration-item"></div>
+    </header>
+    <section class="introduction section-box">
+        <div class="introduction-box">
+            <div class="introduction-decoration">
+                <img src="img/logo-color.png" alt="見出しマーク">
+            </div>
+            <div class="introduction-text">
+                <div class="introduction-text-top">
+                    <h3>Konomiノートって？</h3>
+                </div>
+                <div class="introduction-text-middle">
+                    <p>交換ノートを、もう一度、デジタルで。</p>
+                </div>
+                <div class="introduction-text-bottom">
+                    <p>大切にしたい。</p>
+                    <p>でも、相手の「本当に欲しいもの」や「そっと避けたいNG」は、SNSのタイムラインやDMの奥に埋もれてしまいがちです。</p>
+                    <p>Konomiノートは、そんな大切な「好き」と「NG」の情報をトレンド感あふれるノートのように美しく、そして安全に一括で管理するパーソナルノートアプリです。</p>
+                    <p>プレゼント選びや日常のコミュニケーションにおける迷いや失敗を劇的に減らし、大切な人との関係を一歩先の「成功」へと導きます。</p>
+                    <p>「可愛い」と「役立つ」を両立させた新しいコミュニケーションのカタチを、今すぐ始めましょう。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="function section-box">
+        <div class="function-box">
+            <div class="heading">
+                <div class="heading-border"></div>
+                <h4>Konomiノートでできること</h4>
+            </div>
+            <div class="function-item-box">
+                <div class="function-item">
+                    <div class="function-left-box">
+                        <img src="img/function-img1.png" alt="アプリプレビューver赤">
+                    </div>
+                    <div class="function-right-box">
+                        <div class="function-text">
+                            <p class="function-top-text">もうプレゼント選びで<br>失敗しない！</p>
+                            <p class="function-middle-text">『欲しいもの・NGリスト機能』</p>
+                            <p class="function-bottom-text">相手が本当に欲しいものや、過去に失敗した贈り物、苦手なものをリスト化。ギフトにまつわる悩みや重複を根本から解消します。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <div class="function-right-box">
+                        <div class="function-text">
+                            <p class="function-top-text">推し活が100倍深く、<br>整理される！</p>
+                            <p class="function-middle-text">『テーマ別・カテゴリ整理機能』</p>
+                            <p class="function-bottom-text">推しの好きな食物、ブランド、過去の言動まで、情報がSNSに埋もれることなくカテゴリ別に整理可能。愛を深める情報管理ツールとして機能します。</p>
+                        </div>
+                    </div>
+                    <div class="function-left-box">
+                        <img src="img/function-img2.png" alt="アプリプレビューver黒">
+                    </div>
+                </div>
+                <div class="function-item">
+                    <div class="function-left-box">
+                        <img src="img/function-img3.png" alt="アプリプレビューver青">
+                    </div>
+                    <div class="function-right-box">
+                        <div class="function-text">
+                            <p class="function-top-text">自分の情報を<br>みんなに公開！</p>
+                            <p class="function-middle-text">『公開用パーソナルページ機能』</p>
+                            <p class="function-bottom-text">自分の好みやNGを記録したノートを、Webページとして簡単に発行・シェアできます。フォロワーや友人に自分のパーソナリティを深く伝え、エンゲージメントを高めます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="detail-buttonline">
+            <a href="#"><p>　機能を詳しく見る ＞</p></a>
+        </div>
+    </section>
+    <article class="cta">
+        <div class="cta-box">
+            <div class="cta-left-box">
+                <img src="img/cta-red-img.png" alt="アプリプレビューver赤">
+            </div>
+            <div class="cta-right-box">
+                <h5>konomiノートを<br>今すぐ始めよう！</h5>
+                <div class="download-button-cta">
+                    <a href="#"><img src="img/appstore-img.png" alt="appstoreダウンロードボタン"></a>
+                    <a href="#"><img src="img/googleplay-img.png" alt="googleplayダウンロードボタン"></a>
+                </div>
+            </div>
+        </div>
+    </article>
+    <section class="review section-box">
+        <div class="review-box">
+            <div class="heading">
+                <div class="heading-border"></div>
+                <h4>アプリ利用者の声</h4>
+            </div>
+            <div class="review-item-box">
+                <div class="review-top-item">
+                    <div class="review-item">
+                        <div class="review-icon" >
+                            <img src="img/icon-red.png" alt="赤いアイコン">
+                        </div>
+                        <div class="review-text">
+                            <p>ずっと仲が良い友達でも、実は苦手な食べ物や、今本当に欲しがっているものって聞きづらいですよね。アプリで相互共有を始めたら、友達が「実はパクチーが苦手」と書いてあるのを発見！次のお店選びでさりげなく避けることができ、とても喜ばれました。</p>
+                            <p class="review-text-profile">（20歳・学生）</p>
+                        </div>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-icon" >
+                            <img src="img/icon-blue.png" alt="青いアイコン">
+                        </div>
+                        <div class="review-text">
+                            <p>自分の「好き」と「NG」を公開ページにしてSNSに貼ってみました。そしたら、イベントでの差し入れが全部自分の欲しかったものや、大好きなものばかりに！ファンの方からも「何を贈ればいいか迷わなくて済むから助かる」と言ってもらえました。</p>
+                            <p class="review-text-profile">（21歳・モデル）</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-bottom-item">
+                    <div class="review-item">
+                        <div class="review-icon" >
+                            <img src="img/icon-red.png" alt="赤いアイコン">
+                        </div>
+                        <div class="review-text">
+                            <p>雑誌のインタビューやSNS、動画配信など、推しの情報はあちこちに散らばっていて、いざという時に思い出せないのが悩みでした。このアプリで「好きな色」「愛用香水」「印象的な発言」をカテゴリ分けして整理したら、自分だけの『最強の推し名鑑』が完成！推し活のQOLが爆上がりです。</p>
+                            <p class="review-text-profile">（24歳・フリーランス）</p>
+                        </div>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-icon" >
+                            <img src="img/icon-blue.png" alt="青いアイコン">
+                        </div>
+                        <div class="review-text">
+                            <p>誕生日や記念日、いつも「何でもいいよ」と言われて困っていました。Konami Noteに、普段の会話で出てきた「これ可愛い」「あのブランド気になる」をメモするようにしたら、プレゼント選びが本当にラクに。相手も「覚えててくれたんだ！」と驚いてくれて、二人の時間がより楽しくなりました。 </p>
+                            <p class="review-text-profile">（29歳・会社員）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-buttonline">
+                <a href="#"><p>　利用者の声を詳しく見る ＞</p></a>
+            </div>
+        </div>
+    </section>
+    <section class="fee section-box">
+        <div class="fee-box">
+            <div class="heading">
+                <div class="heading-border"></div>
+                <h4>利用料金</h4>
+            </div>
+            <div class="fee-item-box">
+                <div class="fee-item">
+                    <div class="fee-text-top">
+                        <p class="fee-item-mark">¥</p>
+                        <p class="fee-item-price">0</p>
+                        <p class="fee-item-month">/月</p>
+                        <p class="fee-item-version">無料版</p>
+                    </div>
+                    <a href="#">
+                        <div class="fee-doubleline">
+                            <div class="fee-download-button">
+                                <p>今すぐ無料で始める</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="fee-text-bottom">
+                        <ul class="fee-item-list">
+                            <li>10件のノートが作成可能</li>
+                            <li>広告表示あり</li>
+                            <li>標準セキュリティ</li>
+                            <li>3色のカラーバリエーション</li>
+                            <li>基本共有が可能</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fee-item">
+                    <div class="fee-text-top">
+                        <p class="fee-item-mark">¥</p>
+                        <p class="fee-item-price">480</p>
+                        <p class="fee-item-month">/月</p>
+                        <p class="fee-item-version">Premium</p>
+                    </div>
+                    <a href="#">
+                        <div class="fee-doubleline">
+                            <div class="fee-download-button">
+                                <p>1ヶ月無料で試す</p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="fee-text-bottom">
+                        <ul class="fee-item-list">
+                            <li>無制限のノートが作成可能</li>
+                            <li>広告完全非表示</li>
+                            <li>シークレットロック機能</li>
+                            <li>プレミアムテーマ使い放題</li>
+                            <li>高度な共同編集権限</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-buttonline detail-buttonline-pr">
+                <a href="#"><p>　Premiumを詳しく見る ＞</p></a>
+            </div>
+        </div>
+    </section>
+    <section class="faq section-box">
+        <div class="faq-box">
+            <div class="heading">
+                <div class="heading-border"></div>
+                <h4>よくある質問</h4>
+            </div>
+            <div class="faq-item">
+                <div class="faq-text-box">
+                    <div class="faq-text-right">
+                        <p>登録した情報は他の人に勝手には見られませんか？</p>
+                    </div>
+                    <div class="faq-text-left">
+                        <p>ご安心ください。登録したノートの内容は、デフォルトでは「自分のみ」に設定されています。共有機能を使って、許可した相手以外に情報が公開されることは一切ありません。</p>
+                    </div>
+                </div>
+                <div class="faq-text-box">
+                    <div class="faq-text-right">
+                        <p>「公開ページ」には、どの範囲の情報が載りますか？</p>
+                    </div>
+                    <div class="faq-text-left">
+                        <p>公開ページに載せる項目は、ノートの中から一つひとつ自分で選ぶことができます。例えば「好きなブランド」だけを公開し、「本音のNG」は非公開にするなど、細かな設定が可能です。</p>
+                    </div>
+                </div>
+                <div class="faq-text-box">
+                    <div class="faq-text-right">
+                        <p>機種変更をした場合、データは引き継げますか？</p>
+                    </div>
+                    <div class="faq-text-left">
+                        <p>アカウントを作成（メールアドレスやSNS連携）していただくことで、別の端末でもログインするだけで全てのデータをそのまま引き継ぐことが可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="detail-buttonline detail-buttonline-faq">
+            <a href="#"><p>　よくある質問を詳しく見る ＞</p></a>
+        </div>
+    </section>
+        <article class="cta">
+        <div class="cta-box">
+            <div class="cta-left-box">
+                <img src="img/cta-red-img.png" alt="アプリプレビューver赤">
+            </div>
+            <div class="cta-right-box">
+                <h5>konomiノートを<br>今すぐ始めよう！</h5>
+                <div class="download-button-cta">
+                    <a href="#"><img src="img/appstore-img.png" alt="appstoreダウンロードボタン"></a>
+                    <a href="#"><img src="img/googleplay-img.png" alt="googleplayダウンロードボタン"></a>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="footer-box">
+            <div class="footer-list">
+                <ul>
+                    <li><a href="#">利用規約</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                    <li><a href="#">関連リンク</a></li>
+                    <li><a href="#">運営会社</a></li>
+                    <li><a href="#">広告出稿について</a></li>
+                </ul>
+            </div>
+            <hr class="footer-line">
+            <div class="footer-copy">
+                <small>&copy;2026 Konomi Note</small>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+
